@@ -7,7 +7,7 @@ def read_and_concat(file):
     # combine all csvs into one df
     finaldf = pd.read_csv(file[0])
     for i in file:
-        df = pd.read_csv(i+1)
+        df = pd.read_csv(i)
         finaldf = finaldf.append(df)
         finaldf.reset_index(drop=True, inplace = True)
     return finaldf
@@ -43,7 +43,7 @@ def clean_data(data):
 
 def dummy(data, dum):
 #   create dummies for positions
-    dummies = pd.get_dummies(data[dum], prefix= dum, drop_first=True)
+    dummies = pd.get_dummies(data[dum], prefix= dum)
     data = data.drop([dum], axis=1)
     data = pd.concat([data, dummies], axis=1)
     return data
@@ -54,13 +54,20 @@ def testing_data(data, target):
     X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=2)
     return X_train, X_test, y_train, y_test
 
-def fit_pred(model, test= acc, X_train, X_test, y_train, y_test):
-    model.fit(X_train, y_train)
-    preds = model.predict(X_test)
-    if test == 'acc':
-        test_score = accuracy_score(y_test, preds)
-        print('Accuracy :')
-    else:
-        test_score = f1_score(y_test, preds)
-        print('F1:')
-    return test_score
+def rearrange_cols(data):
+    data = data[['Height', 'Wt', 'Forty', 'Vertical', 'BenchReps', 'Broad_Jump', 'Cone',
+       'Shuttle', 'Drafted', 'Pos_CB', 'Pos_DE', 'Pos_DT', 'Pos_FB', 'Pos_ILB',
+       'Pos_LS', 'Pos_OG', 'Pos_OLB', 'Pos_OT', 'Pos_P', 'Pos_RB', 'Pos_S',
+       'Pos_TE', 'Pos_WR', 'Pos_EDGE', 'Pos_LB', 'Pos_DL', 'Pos_OL', 'Pos_C']]
+    return data
+
+# def fit_pred(model, test= acc, X_train, X_test, y_train, y_test):
+#     model.fit(X_train, y_train)
+#     preds = model.predict(X_test)
+#     if test == 'acc':
+#         test_score = accuracy_score(y_test, preds)
+#         print('Accuracy :')
+#     else:
+#         test_score = f1_score(y_test, preds)
+#         print('F1:')
+#     return test_score

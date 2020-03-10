@@ -54,6 +54,10 @@ def clean_data(data):
     data['Drafted'] = data['DraftRd'].apply(lambda x: 0 if x == 8 else 1)
 #     clear na so models can run
     data = data.fillna(0)
+#   create dummies for positions
+    pos_dummies = pd.get_dummies(data['Pos'], prefix='pos', drop_first=True)
+    data = data.drop(['Pos'], axis=1)
+    data = pd.concat([data, pos_dummies], axis=1)
     # drop draft round
     data = data.drop(columns=['DraftRd'])
     return data
@@ -63,9 +67,3 @@ def testing_data(data, target):
     y = data['target']
     X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=2)
     return X_train, X_test, y_train, y_test
-
-def dummies(data, vari):
-    #   create dummies for positions
-    pos_dummies = pd.get_dummies(data['vari'], prefix='vari', drop_first=True)
-    data = data.drop(['vari'], axis=1)
-    data = pd.concat([data, pos_dummies], axis=1)

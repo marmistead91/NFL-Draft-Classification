@@ -18,7 +18,7 @@ The data is from Kaggle (https://www.kaggle.com/kbanta11/nfl-combine) for stats 
 
 # EDA
 Average reps for bench press higher for drafted players
-![](NFL_Class_Pics/Bench-box.png)
+![](NFL_class_pics/Bench-box.png)
 
 # Model making
 Turned 2000-2017 data and split into train-test-split to be able to train models and predict. Ran KNN, Logistic regression, random forest and XGBoost models. With all of these models I did GridSearch to tune all hyperparameters.

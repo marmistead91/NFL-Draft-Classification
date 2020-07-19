@@ -16,7 +16,9 @@ Using the NFL Combine stats from 2000-2017 I created a model that classifis whet
 # Data
 The data is from Kaggle (https://www.kaggle.com/kbanta11/nfl-combine) for stats from the 2000-2017 combine and draft results. I also got the resutls for the 2018/2019 combine and draft to test on my model.
 
-
+# EDA
+Average reps for bench press higher for drafted players
+![](NFL_Class_Pics/Bench-box.png)
 
 # Model making
 Turned 2000-2017 data and split into train-test-split to be able to train models and predict. Ran KNN, Logistic regression, random forest and XGBoost models. With all of these models I did GridSearch to tune all hyperparameters.

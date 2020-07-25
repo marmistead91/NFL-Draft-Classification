@@ -23,11 +23,11 @@ Average reps for bench press was higher for drafted players
 
 Drafted players had a faster 3 cone drill, 40 yard dash, and shuttle box drill
 
-![](NFL_class_pics/Cone_box.png) ![](NFL_class_pics/40_box.png) ![](NFL_class_pics/shuttle_box.png)
+![](NFL_class_pics/Cone_box.png) ![](NFL_class_pics/40_box.png) ![](NFL_class_pics/shuttle_box.png
 
 Draftedf players had bigger broad and vertical jumps
 
-![](NFL_class_pics/Broad_jump.png) ![](NFL_class_pics/vert.png)
+![](NFL_class_pics/broad_box.png) ![](NFL_class_pics/vert_box.png)
 
 Most players that are invited to the Combine are drafted so I need to have an accuracy higher than 64% to consider my model successful 
 

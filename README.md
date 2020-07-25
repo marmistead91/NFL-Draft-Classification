@@ -23,7 +23,7 @@ Average reps for bench press was higher for drafted players
 
 Drafted players had a faster 3 cone drill, 40 yard dash, and shuttle box drill
 
-![](NFL_class_pics/Cone_box.png) ![](NFL_class_pics/40_box.png) ![](NFL_class_pics/shuttle_box.png
+![](NFL_class_pics/Cone_box.png) ![](NFL_class_pics/Forty_box.png) ![](NFL_class_pics/shuttle_box.png)
 
 Draftedf players had bigger broad and vertical jumps
 

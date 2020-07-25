@@ -21,9 +21,17 @@ Average reps for bench press was higher for drafted players
 
 ![](NFL_class_pics/Bench_box.png)
 
-Drafted players had a faster 3 cone drill time
+Drafted players had a faster 3 cone drill, 40 yard dash, and shuttle box drill
 
-![](NFL_class_pics/Cone_box.png)
+![](NFL_class_pics/Cone_box.png) ![](NFL_class_pics/40_box.png) ![](NFL_class_pics/shuttle_box.png)
+
+Draftedf players had bigger broad and vertical jumps
+
+![](NFL_class_pics/Broad_jump.png) ![](NFL_class_pics/vert.png)
+
+Most players that are invited to the Combine are drafted so I need to have an accuracy higher than 64% to consider my model successful 
+
+![](NFL_class_pics/drafted_vs_non.png)
 
 # Model making
 Turned 2000-2017 data and split into train-test-split to be able to train models and predict. Ran KNN, Logistic regression, random forest and XGBoost models. With all of these models I did GridSearch to tune all hyperparameters.

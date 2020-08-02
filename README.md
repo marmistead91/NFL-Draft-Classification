@@ -36,6 +36,7 @@ Most players that are invited to the Combine are drafted so I need to have an ac
 # Model making
 Turned 2000-2017 data and split into train-test-split to be able to train models and predict. Ran KNN, Logistic regression, random forest and XGBoost models. With all of these models I did GridSearch to tuned all hyperparameters. The top 5 most important features in my model were the players bench repetitions, vertical jump, 3 cone drill time, weight, and their broad jump. 
 
+![](NFL_class_pics/correlatiokn.png)
 
 # Final model
 XGBoost ended up being my best fitting model with an accuracy of 69% and F1 score of .79. These numbers are significant because 64% of players invited are drafted and I had a better accuracy for my predictions and a low amount of false positives. False positives means the model predicted that they were drafted when in reality they were not.

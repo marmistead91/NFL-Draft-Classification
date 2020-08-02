@@ -14,7 +14,7 @@ Players don’t complete all of the drills, depending on their position. For exa
 Using the NFL Combine stats from 2000-2017 I created a model that classifis whether a player would get drafted or not. 
 
 # Data
-The data is from Kaggle (https://www.kaggle.com/kbanta11/nfl-combine) for stats from the 2000-2017 combine and draft results. I also got the resutls for the 2018/2019 combine and draft to test on my model.
+The data is from Kaggle (https://www.kaggle.com/kbanta11/nfl-combine) for stats from the 2000-2017 combine and draft results. I also got the resutls for the 2018/2019 combine and draft to test on my model. For my models and graphs a player is either a 0 or a 1. 1 means that they were drafted and 0 means they were invited to the combine but were not drafted. 
 
 # EDA
 Average reps for bench press was higher for drafted players
@@ -34,10 +34,11 @@ Most players that are invited to the Combine are drafted so I need to have an ac
 ![](NFL_class_pics/drafted_vs_non.png)
 
 # Model making
-Turned 2000-2017 data and split into train-test-split to be able to train models and predict. Ran KNN, Logistic regression, random forest and XGBoost models. With all of these models I did GridSearch to tune all hyperparameters.
+Turned 2000-2017 data and split into train-test-split to be able to train models and predict. Ran KNN, Logistic regression, random forest and XGBoost models. With all of these models I did GridSearch to tuned all hyperparameters. The top 5 most important features in my model were the players bench repetitions, vertical jump, 3 cone drill time, weight, and their broad jump. 
+
 
 # Final model
-XGBoost ended up being my best fitting model with an accuracy of 69% and F1 score of .79. These numbers are significant because 64% of players invited are drafted and I had a better accuracy for my predictions and a low amount of false positives. 
+XGBoost ended up being my best fitting model with an accuracy of 69% and F1 score of .79. These numbers are significant because 64% of players invited are drafted and I had a better accuracy for my predictions and a low amount of false positives. False positives means the model predicted that they were drafted when in reality they were not.
 
 # Further Exploration
-I obtained data for the 2018/2019 combine and draft and ran my models on them. For these years I needed a accuracy score higher than 60.2%. The data was cleaned so it can be ran in my model. When I ran the model I got an accuracy score of 63.7% and a F1 score of .76.
+I obtained data for the 2018/2019 combine and draft and ran my models on them. For these years I needed a accuracy score higher than 60.2%. The data was cleaned so it can be ran in the same model. When I predicted the 2018/2019 class with my model I got an accuracy score of 63.7% and a F1 score of 0.76.
